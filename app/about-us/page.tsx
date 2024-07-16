@@ -1,37 +1,23 @@
-import { Logo } from "@/components/homepage/logo";
 import { Title } from "@/components/homepage/title";
 import { Title2 } from "@/components/homepage/title2";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Features from "@/components/homepage/features";
 import Footer from "@/components/homepage/footer";
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
-import { Paytone_One } from "next/font/google";
-import BuyButton from "@/components/homepage/buy-button";
-import WhySection from "@/components/homepage/why-section";
-import { MainTitle } from "@/components/homepage/main-title";
-import Pricing from "@/components/homepage/pricing";
-import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/display-card";
-import TopBar from "@/components/homepage/top-bar";
 
-const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
 
 export default function AboutUs() {
   return (
     <div className="flex h-screen flex-col align-middle justify-between items-start text-center w-96 md:w-7/12 lg:w-128 xl:w-7/12 mx-auto z-20  ">
       <div>
         <Title title={"About CRIC"} />
-        <p className="text-muted-foreground text-sm md:text-base my-6">
-          
-        </p>
+        <p className="text-muted-foreground text-sm md:text-base my-6"></p>
         <Card className="w-full mt-6 py-4 p-3 sm:p-4 lg bg-gradient-to-br from-transparent to-[hsl(var(--muted))] justify-between text-left">
           <Title2 title={"Our story 📜"} />
           <p className="text-muted-foreground text-sm md:text-base my-6">
-            We met on AI Start-up scene in 2023, after couple of months of collaboration. We started
-            to work on OSINT Solutions and were driven by these goals: Build
-            something performant and affordable for anyone 🧑‍💻 A project with deep level of search
-            powererd by all the latest hot technologies 🌶️ 
+            We met on AI Start-up scene in 2023, after couple of months of
+            collaboration. We started to work on OSINT Solutions and were driven
+            by these goals: Build something performant and affordable for anyone
+            🧑‍💻 A project with deep level of search powererd by all the latest
+            hot technologies 🌶️
           </p>
           <Title2 title={"Our values ⚖️"} />
           <p className="text-muted-foreground text-sm md:text-lg my-6">
