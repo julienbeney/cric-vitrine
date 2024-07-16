@@ -12,7 +12,6 @@ import { FeatureCard } from "./feature-card";
 import { Title } from "./title";
 import {} from "../ui/sheet";
 
-
 export default function Component() {
   return (
     <>
@@ -21,7 +20,8 @@ export default function Component() {
           <CardHeader className="space-y-2">
             <CardTitle className="text-2xl font-bold">Public Search</CardTitle>
             <CardDescription className="text-muted-foreground">
-              For anyone who wan't gather related information about a specific person
+              For anyone who wan't gather related information about a specific
+              person
             </CardDescription>
           </CardHeader>
           <div className="h-full"></div>
@@ -53,10 +53,10 @@ export default function Component() {
           <CardHeader className="space-y-2 ">
             <CardTitle className="text-2xl font-bold">Entreprise</CardTitle>
             <CardDescription className="text-muted-foreground">
-            Conçu pour les entreprises en pleine croissance
+              Conçu pour les entreprises en pleine croissance
             </CardDescription>
           </CardHeader>
-            <div className="h-full"></div>
+          <div className="h-full"></div>
           <CardContent className="space-y-4 justify-end">
             <div className="flex items-baseline justify-center space-x-2">
               <span className="text-4xl font-bold tracking-tight">119 CHF</span>
@@ -71,7 +71,6 @@ export default function Component() {
               </li>
               <li className="flex items-center">
                 <Sheet className="mr-2 h-4 w-4 " />
-                
               </li>
             </ul>
           </CardContent>
@@ -85,7 +84,7 @@ export default function Component() {
           <CardHeader className="space-y-2">
             <CardTitle className="text-2xl font-bold">Custom Offer</CardTitle>
             <CardDescription className="text-muted-foreground">
-            Offering services tailored to your needs
+              Offering services tailored to your needs
             </CardDescription>
           </CardHeader>
           <div className="h-full"></div>
@@ -93,7 +92,6 @@ export default function Component() {
             <div className="flex items-baseline justify-center space-x-2">
               <span className="text-4xl font-bold tracking-tight">???</span>
               <span className="text-muted-foreground">/mois</span>
-
             </div>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center">
