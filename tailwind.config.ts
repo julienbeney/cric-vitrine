@@ -1,18 +1,16 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+import colors from "tailwindcss/colors";
 
-import  defaultTheme from "tailwindcss/defaultTheme";
-import  colors  from "tailwindcss/colors";
- 
-
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -23,14 +21,14 @@ const config = {
       },
     },
     color: {
-     'accent': '#1EE2B7'
+      accent: "#1EE2B7",
     },
     extend: {
       gridTemplateColumns: {
-        month: 'repeat(31, minmax(7, 20))',
+        month: "repeat(31, minmax(7, 20))",
       },
       width: {
-        '128': '32rem',
+        "128": "32rem",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -88,8 +86,6 @@ const config = {
       },
     },
   },
-} satisfies Config
+} satisfies Config;
 
-
-
-export default config
+export default config;
