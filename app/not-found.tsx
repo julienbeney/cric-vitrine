@@ -9,13 +9,14 @@ import {
 } from "@/components/ui/display-card";
 import Link from "next/link";
 import localFont from "next/font/local";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function NotFound() {
   return (
-    <Card className="flex w-96 md:w-7/12 lg:w-128 xl:w-7/12   flex-col align-middle items-center bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md  justify-center h-1/2">
-      <Title title="404" />
+    <Card className="flex w-96 md:w-7/12 lg:w-128 xl:w-7/12 py-8  flex-col align-middle items-center bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md  justify-center h-1/2">
+      <Title title="404 Not F0und" />
       <p className="text-xl text-muted-foreground">Page not found</p>
-      <Link href="/">Go back to the website</Link>
+      <Link  className="hover:text-primary text-muted-foreground text-sm flex flex-row align-baseline" href="/">Go back to the website{" "}<ArrowTopRightIcon /></Link>
     </Card>
   );
 }

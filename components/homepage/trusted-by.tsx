@@ -5,7 +5,11 @@ import mabtransport from "../../public/mabtransport.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Title } from "./title";
+import { Righteous } from "next/font/google";
 const inter = localFont({ src: "../../fonts/CalSans.woff2" });
+const righteous = Righteous({ weight: "400", subsets: ["latin"] });
+
+
 export const TrustedBy = () => {
   return (
     <>
@@ -27,7 +31,7 @@ export const TrustedBy = () => {
           href="https://planifi.ch/"
           className="flex flex-row items-center justify-start"
         >
-          <Title title="Planifi" />
+          <h1 className={righteous.className + " text-4xl text-gray-500"}>Planifi</h1>
           <ArrowTopRightIcon className="ml-2" />
         </Link>
       </div>

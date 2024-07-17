@@ -1,4 +1,4 @@
-import { Circle, Linkedin, Radius, Twitter } from "lucide-react";
+import { Circle, Linkedin, Mail, Phone, Radius, Twitter } from "lucide-react";
 import { Card, CardContent, CardFooter } from "../ui/display-card";
 import { Button } from "../ui/button";
 import { Logo } from "./footer-logo";
@@ -6,6 +6,8 @@ import { Badge } from "../ui/badge";
 import Link from "next/link";
 import localFont from "next/font/local";
 import { ModeToggle } from "./mode-toggle";
+import { InstagramLogoIcon } from "@radix-ui/react-icons";
+import { Righteous } from "next/font/google";
 const inter = localFont({ src: "../../fonts/CalSans.woff2" });
 
 export default function Footer() {
@@ -15,8 +17,8 @@ export default function Footer() {
         <div className="flex flex-col items-start justify-start gap-2 max-w-64">
           <Logo />
           <p className="text-sm font-light text-start">
-          We are on a mission to deliver automated tools 
-          that            requirements for modern entrepreneurs.
+            We are on a mission to deliver automated tools that requirements for
+            modern entrepreneurs.
           </p>
         </div>
         <div className="flex flex-col items-start text-start justify-start gap-2">
@@ -25,7 +27,7 @@ export default function Footer() {
             href={"/about-us"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            À propos de Planifi
+            About CRIC
           </Link>
           <Link
             href={""}
@@ -64,12 +66,27 @@ export default function Footer() {
       </CardContent>
       <CardFooter className=" justify-between align-middle gap-3">
         <div className="flex flex-row gap-3">
-          <Button className="rounded-full" variant={"outline"} size={"icon"}>
-            <Linkedin size={"16"} strokeWidth={1} />
-          </Button>
-          <Button className="rounded-full" variant={"outline"} size={"icon"}>
-            <Linkedin size={"16"} strokeWidth={1} />
-          </Button>
+        <Link href="phone:+41798760848">
+            <Button className="rounded-full" variant={"outline"} size={"icon"}>
+              <Phone size={"16"} strokeWidth={1.5} />
+            </Button>
+          </Link>
+          <Link href="mailto:contact@cyb-int.ch">
+            <Button className="rounded-full" variant={"outline"} size={"icon"}>
+              <Mail size={"16"} strokeWidth={1.5} />
+            </Button>
+          </Link>
+          <Link href="https://www.linkedin.com/in/cyberresearchandintelligencecenter/">
+            <Button className="rounded-full" variant={"outline"} size={"icon"}>
+              <Linkedin size={"16"} strokeWidth={1.5} />
+            </Button>
+          </Link>
+          <Link href="https://www.instagram.com/cric_center_switzerland">
+            <Button className="rounded-full" variant={"outline"} size={"icon"}>
+              <InstagramLogoIcon strokeWidth={1} />
+            </Button>
+          </Link>
+
           <Badge className="w-fit" variant={"outline"}>
             We're building{" "}
             <Radius size={12} className="ml-2 animate-spin text-primary" />

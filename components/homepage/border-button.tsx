@@ -31,7 +31,9 @@ export function BButton({
 }) {
   return (
     <Component
-      className={"bg-transparent relative text-xl  h-fit w-fit p-[1px] overflow-hidden "}
+      className={
+        "bg-transparent relative text-xl  h-fit w-fit p-[1px] overflow-hidden "
+      }
       style={{
         borderRadius: borderRadius,
       }}

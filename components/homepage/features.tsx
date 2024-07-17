@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { FeatureCard } from "./feature-card";
+import { HandCoins } from "lucide-react";
 const inter = localFont({ src: "../../fonts/CalSans.woff2" });
 
 export default function Features() {
@@ -15,21 +16,24 @@ export default function Features() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <FeatureCard
-          title="Cybersecurity Solutions"
-          description="CRIC specializes in comprehensive cybersecurity services, offering thorough vulnerability checks, ethical hacking, and proactive incident management to fortify your digital defenses."
-          icon={"HandCoins"}
+          title="CyberScore Audit"
+          description="CRIC conducts affordable cybersecurity audits, evaluating your company's data privacy practices, performing penetration testing, and assessing employee cybersecurity knowledge. The resulting score, based on these assessments, will be displayed on your website as social proof of your cybersecurity standards."
+          icon={"HeartHandshake"}
+          buttonText={"Get My Free Check"}
+          buttonVariant="default"
           size={2}
         />
 
         <FeatureCard
-          title="Cyber-Origin Intelligence"
-          description="Harness our Cyber-Origin Intelligence for a strategic edge; we analyze and track online traces and threat agents, delivering critical insights to preempt cyber threats."
-          icon={"NotebookText"}
+          title="Cyber Insight"
+          description="An intelligence practitioner with the vision of making data-accessible, focuses on delivering comprehensive due diligence on individuals using their name, email, or pseudonym. Uncover hidden details about anyone to secure your life."
+          icon={"ScanEye"}
+          buttonText={"Track Your Online Exposure"}
         />
         <FeatureCard
-          title="Security Training And Awareness"
-          description="Our security training programs are designed to elevate your team's cyber defense skills and awareness, ensuring your data's integrity against threats."
-          icon={"BarChart3"}
+          title="CRIC Academy"
+          description="Our OSINT training programs are designed to elevate your cyber skills and precious tools to the next level. We offer a range of courses, from beginner to advanced, to help anyone become a cybersecurity expert."
+          icon={"BookOpen"}
         />
       </div>
     </>
