@@ -20,7 +20,7 @@ export default function BuyButton() {
           className="md:text-lg md:p-6 lg:text-xl font-semibold uppercase h-12 rounded-full m-1"
           variant={"default"}
         >
-          See What internet knows anout you
+          See What internet knows about you
         </Button>
       </BButton>
     </motion.div>

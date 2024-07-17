@@ -35,9 +35,8 @@ export default function Main() {
           </div>
         </div>
         <Features />
-        <TrustedBy />
-        <Pricing />
         <WhySection />
+        <TrustedBy />
         <Footer />
       </div>
   );

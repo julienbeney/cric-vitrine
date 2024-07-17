@@ -18,31 +18,31 @@ export default function WhySection() {
         </Button>
         <Title title={"Why working with us ?"} />
         <div className="flex flex-row flex-wrap md:flex-nowrap py-4 text-left gap-6">
-          <div>
+          <div className="w-1/3">
             <p className="flex flex-row align-middle items-center">
-              Proximité <Home size={"18"} className="ml-2" />
+              Confidentiality <Home size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              Nous sommes missionné de délivrer des outils d'automatisation
-              administratives aux entrepreneurs modernes.
+              We protect our user safeguarding your data's privacy.
             </p>
           </div>
-          <div>
+          <div className="w-1/3">
             <p className="flex flex-row align-middle items-center">
-              Support 24/7 <HelpingHand size={"18"} className="ml-2" />
+              Integrity <HelpingHand size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              Nous sommes missionné de délivrer des outils d'automatisation
-              administratives aux entrepreneurs modernes.
+              Rely on the untouchable data we provide through meticulous OSINT
+              formations and audits, maintaining accuracy and reliability.
             </p>
           </div>
-          <div>
+          <div className="w-1/3">
             <p className="flex flex-row align-middle items-center">
-              Satisfait ou remboursé <HandCoins size={"18"} className="ml-2" />
+              Availability <HandCoins size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              Nous sommes missionné de délivrer des outils d'automatisation
-              administratives aux entrepreneurs modernes.
+              Count on our services to be consistently accessible and reliable,
+              ensuring you never miss critical information about company habits
+              and digital footprints
             </p>
           </div>
         </div>
