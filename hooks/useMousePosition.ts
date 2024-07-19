@@ -1,20 +1,29 @@
-import { Mouse, MousePointer } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function useMousePosition() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+const useMousePosition = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (event: any) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
+    const updatePosition = (event: MouseEvent | TouchEvent) => {
+      if (event instanceof MouseEvent) {
+        setPosition({ x: event.clientX, y: event.clientY });
+      } else if (event instanceof TouchEvent) {
+        setPosition({ x: event.touches[0].clientX, y: event.touches[0].clientY });
+      }
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", updatePosition);
+    window.addEventListener("touchstart", updatePosition);
+    window.addEventListener("touchmove", updatePosition);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", updatePosition);
+      window.removeEventListener("touchstart", updatePosition);
+      window.removeEventListener("touchmove", updatePosition);
     };
   }, []);
 
-  return mousePosition;
-}
+  return position;
+};
+
+export default useMousePosition;
