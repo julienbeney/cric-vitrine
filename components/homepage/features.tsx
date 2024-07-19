@@ -26,13 +26,13 @@ export default function Features() {
 
         <FeatureCard
           title="Cyber Insight"
-          description="An intelligence practitioner with the vision of making data-accessible, focuses on delivering comprehensive due diligence on individuals using their name, email, or pseudonym. Uncover hidden details about anyone to secure your life."
+          description="An AI powered tool, revealing all the information about someone. Uncover hidden details about anyone to secure your life."
           icon={"ScanEye"}
           buttonText={"Track Your Online Exposure"}
         />
         <FeatureCard
           title="CRIC Academy"
-          description="Our OSINT training programs are designed to elevate your cyber skills and precious tools to the next level. We offer a range of courses, from beginner to advanced, to help anyone become a cybersecurity expert."
+          description="Our OSINT training programs are designed to elevate your cyber skills and precious tools to the next level, from beginner to advanced."
           icon={"BookOpen"}
         />
       </div>

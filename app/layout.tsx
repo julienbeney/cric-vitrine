@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CRIC",
   description:
-    "Planifi est une solution SaaS innovante de gestion du personnel pour les PME suisses francophones, offrant des fonctionnalités complètes telles que la planification des horaires, le pointage par QR code, la consultation des soldes et des plannings, la validation des demandes par les managers, et la génération automatique des fiches de paie. Simplifiez votre gestion du personnel et améliorez votre productivité avec notre plateforme intuitive et sécurisée. Inscrivez-vous dès aujourd'hui pour un essai gratuit!",
+    "CRIC is a leading business intelligence firm based in Switzerland, specializing in cybersecurity and intelligence. We provide an acces to powerfull OSINT tools for anyone.",
 };
 
 export default function RootLayout({
