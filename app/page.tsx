@@ -10,6 +10,9 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Paytone_One } from "next/font/google";
 import BuyButton from "@/components/homepage/buy-button";
 import WhySection from "@/components/homepage/why-section";
+import SickOff from "@/components/homepage/sick-off";
+import Audits from "@/components/homepage/audits";
+
 import { MainTitle } from "@/components/homepage/main-title";
 import Pricing from "@/components/homepage/pricing";
 import TopBar from "@/components/homepage/top-bar";
@@ -24,7 +27,7 @@ export default function Main() {
         </Badge>
         <MainTitle />
         <p className="text-muted-foreground text-sm md:text-lg">
-        CRIC is a leading business intelligence firm based in Switzerland, specializing in cybersecurity and cyber-origin intelligence. We provide an acces to personnal data for anyone.
+        CRIC is a leading business intelligence firm based in Switzerland, specializing in cybersecurity and cyber-origin intelligence. We provide an acces to priceless data for anyone.
         </p>
         <div className="flex flex-row align-top items-start gap-4 my-4 py-10">
           <div className="flex flex-col align-middle items-center gap-1">
@@ -35,8 +38,10 @@ export default function Main() {
           </div>
         </div>
         <Features />
-        <WhySection />
+        <SickOff />
+        <Audits />
         <TrustedBy />
+        <WhySection />
         <Footer />
       </div>
   );

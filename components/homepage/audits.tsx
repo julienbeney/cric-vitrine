@@ -3,48 +3,56 @@ import { Card } from "../ui/display-card";
 import Icon from "../ui/icon";
 import BuyButton from "./buy-button";
 import { Title } from "./title";
-import { HandCoins, HelpCircle, HelpingHand, Home } from "lucide-react";
-export default function WhySection() {
+import {
+  Bug,
+  Grid2X2,
+  HandCoins,
+  HelpCircle,
+  HelpingHand,
+  Home,
+  ServerCrash,
+} from "lucide-react";
+export default function Audits() {
   return (
-    <Card className="my-6 p-4 w-full bg-gradient-to-bl from-transparent to-[hsl(var(--muted))]">
+    <Card className="my-4 p-4 w-full bg-gradient-to-bl from-transparent to-[hsl(var(--muted))]">
       <div className="flex flex-col items-center justify-center gap-4">
         <Button variant={"outline"} size={"icon"} className="rounded-full m-2">
           <Icon
-            name={"Rocket"}
+            name={"Bug"}
             strokeWidth={"1.8"}
             size={"24"}
             color={"var(--foreground)"}
           />
         </Button>
-        <Title title={"Why working with us ?"} />
+        <Title title={"Strengthen Your Security and Compliance!"} />
+        <BuyButton title={"Book your audit now"} />
         <div className="grid grid-cols-2 lg:grid-cols-3 py-4 text-left gap-6">
           <div className="">
             <p className="flex flex-row align-middle items-center">
-              Confidentiality <Home size={"18"} className="ml-2" />
+              Risk Mitigation <ServerCrash size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              By maintaining confidentiality, organizations safeguard their
-              intellectual property, customer data, and competitive advantage,
-              fostering trust and compliance with regulatory standards.
+              Our comprehensive security audits identify critical
+              vulnerabilities and provide actionable strategies to protect your
+              assets.
             </p>
           </div>
           <div className="">
             <p className="flex flex-row align-middle items-center">
-              Integrity <HelpingHand size={"18"} className="ml-2" />
+              Threat Detection & Prevention <Bug size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              Rely on the untouchable data we provide through meticulous OSINT
-              formations and audits, maintaining accuracy and reliability.
+              Our proactive approach uncovers hidden weaknesses, ensuring your
+              defenses are prepared for real-world cyber threats.
             </p>
           </div>
           <div className="">
             <p className="flex flex-row align-middle items-center">
-              Availability <HandCoins size={"18"} className="ml-2" />
+              Data Compliance <Grid2X2 size={"18"} className="ml-2" />
             </p>
             <p className="text-muted-foreground text-light">
-              Count on our services to be consistently accessible and reliable,
-              ensuring you never miss critical information about company habits
-              and digital footprints
+              Achieve and maintain compliance with our thorough data protection
+              audits, tailored to your industry's regulations.
             </p>
           </div>
         </div>

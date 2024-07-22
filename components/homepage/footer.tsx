@@ -15,7 +15,12 @@ export default function Footer() {
     <Card className="w-full my-6 -p-2 bg-gradient-to-br from-transparent to-[hsl(var(--muted))] justify-between">
       <CardContent className="flex flex-row flex-wrap mt-6 gap-6 justify-between">
         <div className="flex flex-col items-start justify-start gap-2 max-w-64">
-          <Logo />
+          <div className="flex flex-row gap-2">
+            <Logo />
+            <p className="text-muted-foreground text-sm font-light text-start">
+              🇨🇭
+            </p>
+          </div>
           <p className="text-sm font-light text-start">
             We are on a mission to deliver automated tools that requirements for
             modern entrepreneurs.
@@ -33,40 +38,46 @@ export default function Footer() {
             href={""}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            Features
+            Service Offer
           </Link>
           <Link
             href={""}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            Prix
+            Pricing
           </Link>
         </div>
         <div className="flex flex-col items-start text-start justify-start gap-2">
-          <h3 className={inter.className + " font-semibold"}>Ressources</h3>
+          <h3 className={inter.className + " font-semibold"}>Services</h3>
           <Link
-            href={"/about-us"}
+            href={"/cyber-search"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            Accueil
+            CyberSearch
           </Link>
           <Link
-            href={""}
+            href={"/cyber-score"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            Features
+            CyberScore
           </Link>
           <Link
-            href={""}
+            href={"audits"}
             className="text-muted-foreground text-sm underline underline-offset-2"
-          >
-            Prix
+            >
+            Advanced Audits
+          </Link>
+          <Link
+            href={"audits"}
+            className="text-muted-foreground text-sm underline underline-offset-2"
+            >
+            OSINT formations
           </Link>
         </div>
       </CardContent>
       <CardFooter className=" justify-between align-middle gap-3">
         <div className="flex flex-row gap-3">
-        <Link href="phone:+41798760848">
+          <Link href="phone:+41798760848">
             <Button className="rounded-full" variant={"outline"} size={"icon"}>
               <Phone size={"16"} strokeWidth={1.5} />
             </Button>

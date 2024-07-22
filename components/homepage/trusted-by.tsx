@@ -8,9 +8,9 @@ export const TrustedBy = () => {
   const [clicked, setClicked] = useState(false)
   return (
     <>
-      <div className="mt-8"></div>
+      <div className="mt-12"></div>
       <Title title="Trusted By" />
-      <div className="mt-6 flex flex-row justify-evenly w-full">
+      <div className="my-6 flex flex-row justify-evenly w-full">
         {!clicked ? (<Button variant={"outline"} onClick={() => setClicked(true)} className="rounded-full">
           <Icon
             name={"Eye"}
@@ -27,7 +27,7 @@ export const TrustedBy = () => {
           />
         </Button>) : 
         (<h1 className={"text-md text-muted-foreground"}>
-          Nice try, we'll never expose who are our clients..
+          Nice try, we'll never expose who our clients are..
         </h1>)}
       </div>
     </>
