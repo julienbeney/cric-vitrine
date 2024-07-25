@@ -32,10 +32,7 @@ export default function RootLayout({
         >
           <div className={"relative min-h-screen"}>
             <InteractiveMask />
-            <main className="relative z-10 ">
-              <TopBar />
-              <div className="h-full mt-28 pb-2 pl-2 pr-2">{children}</div>
-            </main>
+            {children}
             <Toaster />
           </div>
         </ThemeProvider>

@@ -18,7 +18,7 @@ export default function BuyButton(props: any) {
     >
       <BButton>
         <Button
-          className="md:text-lg md:p-6 lg:text-xl font-semibold uppercase h-12 rounded-full m-1"
+          className="tracking-wider text-foreground md:text-lg md:p-6 lg:text-xl font-semibold uppercase h-12 rounded-full m-1"
           variant={"default"}
         >
           {title}

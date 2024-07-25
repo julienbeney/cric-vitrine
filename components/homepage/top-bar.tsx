@@ -11,14 +11,15 @@ export default function TopBar() {
     <>
       <div className="sm:fixed hidden left-1/2 transform -translate-x-1/2 w-full sm:w-11/12 md:w-8/12 xl:w-7/12 shadow-lg  space-x-8 top-0 z-30 sm:flex flex-row align-middle justify-between items-center my-6 py-2 px-6 rounded-full backdrop-blur-xl">
         <Logo />
-        <div className="w-1/2 flex flex-row flex-wrap align-middle justify-center gap-2 sm:gap-6 md:gap-8 items-center text-sm">
-          <HoveredLink href="/services">Services</HoveredLink>
-          <HoveredLink href="/pricing">Pricing</HoveredLink>
+        <div className="w-1/2 flex flex-row flex-wrap align-middle justify-center space-x-6   items-center text-sm">
+          <HoveredLink href="/product">Product</HoveredLink>
           <HoveredLink href="/about-us">About Us</HoveredLink>
         </div>
-        <Button className="rounded-full" variant={"default"}>
-          Work with us
-        </Button>
+        <Link href="/login">
+          <Button className="rounded-full" variant={"default"}>
+            Start
+          </Button>
+        </Link>
       </div>
       {clicked ? (
         <div className="sm:hidden fixed left-1/2 transform -translate-x-1/2 w-full sm:w-11/12 md:w-8/12 xl:w-7/12 shadow-lg  space-x-8 top-0 z-30 flex flex-row align-middle justify-between items-center my-6 py-2 px-6 rounded-full backdrop-blur-xl">
@@ -30,12 +31,14 @@ export default function TopBar() {
             <Menu />
           </Button>
           <Logo />
-          <Button className="rounded-full" variant={"default"}>
-            Work with us
-          </Button>
+          <Link href="/login">
+            <Button className="rounded-full" variant={"default"}>
+              Start
+            </Button>
+          </Link>
         </div>
       ) : (
-        <div className="sm:hidden fixed left-1/2 transform -translate-x-1/2 w-full sm:w-11/12 md:w-8/12 xl:w-7/12 shadow-lg top-0 z-30 my-6 py-2 px-6 rounded-full backdrop-blur-xl">
+        <div className="sm:hidden fixed left-1/2 transform -translate-x-1/2 w-full sm:w-11/12 md:w-8/12 xl:w-7/12 shadow-lg top-0 z-30 my-6 py-2 px-6 rounded-lg sm:rounded-full backdrop-blur-xl">
           <div className="flex flex-row align-middle justify-between items-center space-x-8">
             <Button
               size={"icon"}
@@ -45,15 +48,22 @@ export default function TopBar() {
               <X />
             </Button>
             <Logo />
-            <Button className="rounded-full" variant={"default"}>
-              Work with us
-            </Button>
+            <Link href="/login">
+              <Button className="rounded-full" variant={"default"}>
+                Start
+              </Button>
+            </Link>
           </div>
 
-          <div className=" flex flex-col justify-start gap-4 m-4 items-start text-lg">
-            <HoveredLink href="/services">{"~> "}Services</HoveredLink>
-            <HoveredLink href="/pricing">{"~> "}Pricing</HoveredLink>
-            <HoveredLink href="/about-us">{"~> "}About Us</HoveredLink>
+          <div className=" flex flex-col justify-start gap-4 m-4 mt-10 items-start text-lg">
+            <HoveredLink onClick={() => setClicked(true)} href="/product">
+              {" "}
+              Product
+            </HoveredLink>
+            <HoveredLink onClick={() => setClicked(true)} href="/about-us">
+              {" "}
+              About Us
+            </HoveredLink>
           </div>
         </div>
       )}
@@ -65,7 +75,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="hover:text-primary text-muted-foreground text-sm"
+      className="hover:text-primary text-muted-foreground text-lg sm:text-sm"
     >
       {children}
     </Link>

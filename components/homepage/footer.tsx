@@ -50,13 +50,13 @@ export default function Footer() {
         <div className="flex flex-col items-start text-start justify-start gap-2">
           <h3 className={inter.className + " font-semibold"}>Services</h3>
           <Link
-            href={"/cyber-search"}
+            href={"/product/cyber-search"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
             CyberSearch
           </Link>
           <Link
-            href={"/cyber-score"}
+            href={"/product/cyber-score"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
             CyberScore
@@ -77,7 +77,7 @@ export default function Footer() {
       </CardContent>
       <CardFooter className=" justify-between align-middle gap-3">
         <div className="flex flex-row gap-3">
-          <Link href="phone:+41798760848">
+          <Link href="tel:+41798760848">
             <Button className="rounded-full" variant={"outline"} size={"icon"}>
               <Phone size={"16"} strokeWidth={1.5} />
             </Button>

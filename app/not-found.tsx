@@ -13,11 +13,13 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function NotFound() {
   return (
-    <Card className="flex w-96 md:w-7/12 lg:w-128 xl:w-7/12 py-8  flex-col align-middle items-center bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md  justify-center h-1/2">
+    <div className="flex flex-1 justify-center items-center h-screen w-full">
+    <Card className="flex w-full mx-auto sm:w-7/12 lg:w-128 xl:w-7/12 py-8 px-4 md:px-8 gap-2 flex-col align-middle justify-center items-center bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md  h-fit">
       <Title title="404 Not F0und" />
-      <p className="text-xl text-muted-foreground">Page not found</p>
+      <p className="text-base md:text-xl text-muted-foreground">Sorry, but the page you were looking for could not be found.</p>
       <Link  className="hover:text-primary text-muted-foreground text-sm flex flex-row align-baseline" href="/">Go back to the website{" "}<ArrowTopRightIcon /></Link>
     </Card>
+    </div>
   );
 }
 

@@ -16,33 +16,35 @@ import Audits from "@/components/homepage/audits";
 import { MainTitle } from "@/components/homepage/main-title";
 import Pricing from "@/components/homepage/pricing";
 import TopBar from "@/components/homepage/top-bar";
+import { ProductCard } from "./components/product-card";
+import Link from "next/link";
 
 const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
 
 export default function Main() {
   return (
-      <div className="flex flex-col align-middle justify-center items-center text-center w-full sm:w-8/12 xl:w-7/12 mx-auto z-20">
-        <Badge variant={"secondary"} className="mt-28">
-          Proudly Swiss Made <ArrowTopRightIcon />
-        </Badge>
-        <MainTitle />
-        <p className="text-muted-foreground text-sm md:text-lg">
-        CRIC is a leading business intelligence firm based in Switzerland, specializing in cybersecurity and cyber-origin intelligence. We provide an acces to priceless data for anyone.
-        </p>
-        <div className="flex flex-row align-top items-start gap-4 my-4 py-10">
-          <div className="flex flex-col align-middle items-center gap-1">
-            <BuyButton />
-            <p className="text-muted-foreground text-sm ml-6">
-              Offer limited to Swiss residents
-            </p>
-          </div>
-        </div>
-        <Features />
-        <SickOff />
-        <Audits />
-        <TrustedBy />
-        <WhySection />
-        <Footer />
+    <div className="flex flex-col align-middle justify-center items-center text-center w-full sm:w-8/12 xl:w-7/12 mx-auto z-20">
+      <Badge variant={"secondary"} className="mt-28">
+        Proudly Swiss Made <ArrowTopRightIcon />
+      </Badge>
+      <MainTitle>Discover our online Solutions</MainTitle>
+      <div className="flex flex-row align-top items-start gap-4 my-4 pt-6 pb-10">
+        <Link href="/product/cyber-search">
+          <ProductCard
+            title="CyberSearch"
+            description="Do an OSINT search about someone."
+            icon={"SearchCheck"}
+          />
+        </Link>
+        <Link href="/product/cyber-score">
+          <ProductCard
+            title="CyberScore"
+            description="See how your company is secured over the web."
+            icon={"HeartHandshake"}
+          />
+        </Link>
       </div>
+      <Footer />
+    </div>
   );
 }
