@@ -35,16 +35,16 @@ export default function Footer() {
             About CRIC
           </Link>
           <Link
-            href={""}
+            href={"/"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
             Service Offer
           </Link>
           <Link
-            href={""}
+            href={"/product"}
             className="text-muted-foreground text-sm underline underline-offset-2"
           >
-            Pricing
+            Product
           </Link>
         </div>
         <div className="flex flex-col items-start text-start justify-start gap-2">

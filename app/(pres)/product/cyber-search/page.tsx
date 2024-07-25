@@ -14,18 +14,11 @@ import { AnimatedTooltip } from "./components/tooltip";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
-const badge = {
-  id: 1,
-  name: "Open Source Intelligence Doe",
-  designation:
-    "Open Source Intelligence (OSINT) is the collection and analysis of information that is gathered from publicly available sources to be used in an intelligence context",
-};
 export default function Services() {
   return (
-    <div className="flex flex-col align-middle justify-center items-center text-center mt-28 w-full sm:w-8/12 xl:w-7/12 mx-auto z-20">
+    <>
       <a target="_blank" rel="noopener noreferrer"  href="https://en.wikipedia.org/wiki/Open-source_intelligence">
-        <Badge variant={"secondary"} className="">
+        <Badge variant={"secondary"}>
           OSINT <ArrowTopRightIcon className="ml-1" />
         </Badge>
       </a>
@@ -44,7 +37,6 @@ export default function Services() {
       <Features />
       <SickOff />
       <BusinessIntelligeance />
-      <Footer />
-    </div>
+    </>
   );
 }

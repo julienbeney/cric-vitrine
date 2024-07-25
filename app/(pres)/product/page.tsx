@@ -23,8 +23,8 @@ const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
 
 export default function Main() {
   return (
-    <div className="flex flex-col align-middle justify-center items-center text-center w-full sm:w-8/12 xl:w-7/12 mx-auto z-20">
-      <Badge variant={"secondary"} className="mt-28">
+    <>
+      <Badge variant={"secondary"}>
         Proudly Swiss Made <ArrowTopRightIcon />
       </Badge>
       <MainTitle>Discover our online Solutions</MainTitle>
@@ -44,7 +44,6 @@ export default function Main() {
           />
         </Link>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
