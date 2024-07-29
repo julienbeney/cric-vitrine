@@ -4,7 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/provider/theme-provider";
 import InteractiveMask from "@/components/homepage/interactive-background";
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,6 +31,7 @@ export default function RootLayout({
             {children}
             <Toaster />
         </ThemeProvider>
+        <Analytics/> 
       </body>
     </html>
   );
