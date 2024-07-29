@@ -18,9 +18,7 @@ export default function Main() {
   return (
     <>
       <Head>
-        // Define the meta title
         <title>CRIC - Swiss Cybersecurity and Intelligence Services</title>
-        // Define the meta description
         <meta
           name="description"
           content="CRIC, a leading Swiss cybersecurity firm, offers comprehensive OSINT tools, cybersecurity audits, and training to enhance your digital security. Discover how to protect your assets now."
