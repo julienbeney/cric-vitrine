@@ -1,12 +1,14 @@
 import { TrustedBy } from "@/components/homepage/trusted-by";
 import { Badge } from "@/components/ui/badge";
-import Features from "./components/features";
+
+import { NextPage } from 'next';
+import Head from 'next/head';import Features from "./components/features";
 import Footer from "@/components/homepage/footer";
 import { Paytone_One } from "next/font/google";
 import BuyButton from "@/components/homepage/buy-button";
 import WhySection from "@/components/homepage/why-section";
 import SickOff from "./components/sick-off";
-import BusinessIntelligeance from "./components/bi";
+import BusinessIntelligeance from "../../(no-prod)/enterprise/components/bi";
 
 import { MainTitle } from "@/components/homepage/main-title";
 import { SearchCheck, SearchCode } from "lucide-react";
@@ -17,7 +19,14 @@ const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
 export default function Services() {
   return (
     <>
-      <Badge variant={"secondary"} className="mt-28">
+    <Head>
+        <title>Discover Our Online Cybersecurity Solutions | CRIC</title>
+        <meta name="description" content="Explore top Swiss-hosted cybersecurity tools like CyberSearch and CyberScore to secure your company's digital presence." />
+        <meta property="og:title" content="Discover Our Online Cybersecurity Solutions | CRIC" />
+        <meta property="og:description" content="Choose between advanced cybersecurity tools designed to offer comprehensive protection and insights into your security posture." />
+        <meta property="og:type" content="website" />
+      </Head>
+      <Badge variant={"secondary"} >
         Social Proof
       </Badge>
       <MainTitle>CyberScore</MainTitle>

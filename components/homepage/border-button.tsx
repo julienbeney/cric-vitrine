@@ -32,7 +32,7 @@ export function BButton({
   return (
     <Component
       className={
-        "bg-transparent relative text-xl  h-fit w-fit p-[1px] overflow-hidden "
+        " shadow-2xl shadow-primary bg-transparent relative text-xl  h-fit w-fit p-[1px] overflow-hidden "
       }
       style={{
         borderRadius: borderRadius,

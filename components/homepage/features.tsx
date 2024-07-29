@@ -20,7 +20,6 @@ export default function Features() {
           description="CRIC conducts affordable cybersecurity audits, evaluating your company's data privacy practices, performing penetration testing, and assessing employee cybersecurity knowledge. The resulting score, based on these assessments, will be displayed on your website as social proof of your cybersecurity standards."
           icon={"HeartHandshake"}
           buttonText={"Get My Free Check"}
-          buttonVariant="default"
           size={2}
         />
 
@@ -31,14 +30,17 @@ export default function Features() {
           buttonText={"Track Your Online Exposure"}
         />
         <FeatureCard
-          title="CyberSecurity Audit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
-          icon={"BookOpen"}
-        />
-        <FeatureCard
           title="CRIC Academy"
           description="Our OSINT training programs are designed to elevate your cyber skills and precious tools to the next level, from beginner to advanced."
+          icon={"University"}
+        />
+        <FeatureCard
+          title="CyberSecurity Audit"
+          description="We provide tailored cybersecurity audits and bespoke securitization to fortify and understand your digital security."
           icon={"BookOpen"}
+          buttonText={"Book your audit now"}
+          size={2}
+          buttonVariant="default"
         />
       </div>
     </>

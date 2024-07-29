@@ -4,9 +4,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/provider/theme-provider";
 import InteractiveMask from "@/components/homepage/interactive-background";
-import styles from "../style.module.css";
-import { NavBar } from "@/components/homepage/nav-bar";
-import TopBar from "@/components/homepage/top-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +27,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className={"relative min-h-screen"}>
             <InteractiveMask />
             {children}
             <Toaster />
-          </div>
         </ThemeProvider>
       </body>
     </html>

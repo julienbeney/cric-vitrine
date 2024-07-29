@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/display-card";
 import Icon from "@/components/ui/icon";
@@ -25,7 +26,7 @@ export default function BusinessIntelligeance() {
             color={"var(--foreground)"}
           />
         </Button>
-        <Title title={"Business Intelligeance for Enterprise!"} />
+        <Title title={"Business Intelligence for Enterprise!"} />
         <BuyButton title={"Contact us"} url="/book-a-call" />
         <div className="grid grid-cols-2 lg:grid-cols-3 py-4 text-left gap-6">
           <div className="">

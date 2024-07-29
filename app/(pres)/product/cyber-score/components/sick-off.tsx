@@ -1,9 +1,7 @@
+"use client"
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/display-card";
-import Icon from "@/components/ui/icon";
-import BuyButton from "@/components/homepage/buy-button";
-import { Title } from "@/components/homepage/title";
-import { Calendar, CalendarCheck, HandCoins, HelpCircle, HelpingHand, Home } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 export default function SickOff() {
   return (
     <div className="flex flex-col w-full my-12  justify-center items-center align-middle">
@@ -14,9 +12,11 @@ export default function SickOff() {
         <Button variant={"default"} className="rounded-full">
           Get your free search
         </Button>
-        <Button variant={"outline"} className="rounded-full">
-          Book a call with us <CalendarCheck size={"18"} className="ml-2" />
-        </Button>
+        <Link href="https://calendly.com/julienbeneypro/30min">
+          <Button variant={"outline"} className="rounded-full">
+            Book a call with us <CalendarCheck size={"18"} className="ml-2" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

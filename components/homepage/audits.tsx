@@ -25,7 +25,7 @@ export default function Audits() {
           />
         </Button>
         <Title title={"Strengthen Your Security and Compliance!"} />
-        <BuyButton title={"Book your audit now"} />
+        <BuyButton title={"Book your audit now"} url="/book-a-call" />
         <div className="grid grid-cols-2 lg:grid-cols-3 py-4 text-left gap-6">
           <div className="">
             <p className="flex flex-row align-middle items-center">

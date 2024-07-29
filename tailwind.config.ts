@@ -30,6 +30,9 @@ const config = {
       width: {
         "128": "32rem",
       },
+      height: {
+        "256": "64rem",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

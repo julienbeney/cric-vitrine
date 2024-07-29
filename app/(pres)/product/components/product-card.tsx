@@ -31,51 +31,52 @@ export const ProductCard = (props: any) => {
     },
   };
   return (
-    <motion.div
-      variants={cardVariants}
-      initial="initial"
-      whileHover="hover"
-      className="rounded-lg mouse-pointer"
+    <Card
+      className={
+        (props.size === 2 ? "md:col-span-2 " : "") +
+        " group/bento transition duration-200 flex flex-col justify-between mouse-pointer bg-gradient-to-br from-[hsl(var(--muted))] to-transparent"
+      }
     >
-      <Card
-        className={
-          (props.size === 2 ? "md:col-span-2 " : "") +
-          "bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md flex flex-col justify-between"
-        }
-      >
-        <CardHeader className="text-start">
-          <div className="flex flex-row justify-center">
-            <CardTitle className={inter.className + " text-2xl tracking-wide"}>
-              {props.title}
-            </CardTitle>
-            <Button
-              variant={"secondary"}
-              size={"icon"}
-              className="rounded-full ml-2"
-            >
-              <Icon
-                name={props.icon}
-                strokeWidth={"1.2"}
-                size={"22"}
-                color={"var(--foreground)"}
-              />
-            </Button>
-          </div>
-          <CardDescription className="text-md">
-            {props.description}
-          </CardDescription>
-        </CardHeader>
-        <CardFooter className="flex flex-row w-full items-end align-bottom justify-between">
-          {props.buttonText && (
-            <Button
-              variant={props.buttonVariant || "outline"}
-              className="rounded-full"
-            >
-              {props.buttonText}
-            </Button>
-          )}
-        </CardFooter>
-      </Card>
-    </motion.div>
+      <CardHeader className="group-hover/bento:translate-x-2 transition duration-200 text-center">
+        <div className="flex flex-row justify-center">
+          <CardTitle className={inter.className + " text-2xl tracking-wide"}>
+            {props.title}
+          </CardTitle>
+          <Button
+            variant={"secondary"}
+            size={"icon"}
+            className="rounded-full ml-2 group-hover/bento:bg-primary transition duration-200"
+          >
+            <Icon
+              name={props.icon}
+              strokeWidth={"1.2"}
+              size={"22"}
+              color={"var(--foreground)"}
+            />
+          </Button>
+        </div>
+        <CardDescription className="text-md">
+          {props.description}
+        </CardDescription>
+      </CardHeader>
+      <CardFooter className="flex flex-row w-full items-end align-bottom justify-between">
+        {props.buttonText && (
+          <Button
+            variant={props.buttonVariant || "outline"}
+            className="rounded-full"
+          >
+            {props.buttonText}
+          </Button>
+        )}
+      </CardFooter>
+    </Card>
   );
 };
+/*
+<motion.div
+  variants={cardVariants}
+  initial="initial"
+  whileHover="hover"
+  className="rounded-lg mouse-pointer">
+</motion.div>
+*/

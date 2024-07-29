@@ -5,14 +5,14 @@ const inter = localFont({ src: "../../../../../fonts/CalSans.woff2" });
 
 export default function SearchFeatures() {
   return (
-    <>
+    <div>
       <p
         className={
           inter.className +
           " mt-6 mb-4 justify-center text-2xl md:text-3xl bg-gradient-to-tl from-0% from-[hsl(var(--muted))] to-40% to-[hsl(var(--foreground))] bg-clip-text text-transparent"
         }
       >
-        Features
+        Benefits
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <FeatureCard
@@ -36,6 +36,6 @@ export default function SearchFeatures() {
           icon={"FolderOpenDot"}
         />
       </div>
-    </>
+    </div>
   );
 }

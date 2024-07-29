@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Logo } from "./logo";
-import { Menu, X } from "lucide-react";
+import { AppWindowMac, BookOpen, Briefcase, Building, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function TopBar() {
@@ -13,6 +13,7 @@ export default function TopBar() {
         <Logo />
         <div className="w-1/2 flex flex-row flex-wrap align-middle justify-center space-x-6   items-center text-sm">
           <HoveredLink href="/product">Product</HoveredLink>
+          <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           <HoveredLink href="/about-us">About Us</HoveredLink>
         </div>
         <Link href="/login">
@@ -57,12 +58,22 @@ export default function TopBar() {
 
           <div className=" flex flex-col justify-start gap-4 m-4 mt-10 items-start text-lg">
             <HoveredLink onClick={() => setClicked(true)} href="/product">
-              {" "}
-              Product
+              <span className="flex flex-row items-center gap-2">
+                <AppWindowMac />
+                Product
+              </span>
+            </HoveredLink>
+            <HoveredLink onClick={() => setClicked(true)} href="/enterprise">
+              <span className="flex flex-row items-center gap-2">
+                <Briefcase />
+                Enterprise
+              </span>
             </HoveredLink>
             <HoveredLink onClick={() => setClicked(true)} href="/about-us">
-              {" "}
-              About Us
+              <span className="flex flex-row items-center gap-2">
+                <BookOpen />
+                About Us
+              </span>
             </HoveredLink>
           </div>
         </div>

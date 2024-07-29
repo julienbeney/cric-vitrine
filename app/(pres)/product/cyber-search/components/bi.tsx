@@ -19,14 +19,14 @@ export default function BusinessIntelligeance() {
       <div className="flex flex-col items-center justify-center gap-4">
         <Button variant={"outline"} size={"icon"} className="rounded-full m-2">
           <Icon
-            name={"Bug"}
+            name={"Briefcase"}
             strokeWidth={"1.8"}
             size={"24"}
             color={"var(--foreground)"}
           />
         </Button>
         <Title title={"Business Intelligeance for Enterprise!"} />
-        <BuyButton title={"Contact us"} />
+        <BuyButton title={"Contact us"} url="/book-a-call" />
         <div className="grid grid-cols-2 lg:grid-cols-3 py-4 text-left gap-6">
           <div className="">
             <p className="flex flex-row align-middle items-center">

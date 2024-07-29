@@ -1,34 +1,40 @@
-import { Logo } from "@/components/homepage/logo";
-import { Title } from "@/components/homepage/title";
-import { TrustedBy } from "@/components/homepage/trusted-by";
+import { NextPage } from "next";
+import Head from "next/head";
+
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Features from "@/components/homepage/features";
-import Footer from "@/components/homepage/footer";
-import { cn } from "@/lib/utils";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Paytone_One } from "next/font/google";
-import BuyButton from "@/components/homepage/buy-button";
-import WhySection from "@/components/homepage/why-section";
-import SickOff from "@/components/homepage/sick-off";
-import Audits from "@/components/homepage/audits";
 
 import { MainTitle } from "@/components/homepage/main-title";
-import Pricing from "@/components/homepage/pricing";
-import TopBar from "@/components/homepage/top-bar";
 import { ProductCard } from "./components/product-card";
 import Link from "next/link";
-
-const payton = Paytone_One({ weight: "400", subsets: ["latin"] });
-
 export default function Main() {
   return (
     <>
+      <Head>
+        <title>
+          CyberScore: Comprehensive Security Audits for Your Business
+        </title>
+        <meta
+          name="description"
+          content="CyberScore provides a detailed security audit for your company, offering cost-effective solutions and a cybersecurity score to enhance your website's credibility."
+        />
+        <meta
+          property="og:title"
+          content="CyberScore: Secure Your Company's Future"
+        />
+        <meta
+          property="og:description"
+          content="Explore CyberScore for a comprehensive, cost-effective security audit. Try it free and see how you can improve your cybersecurity rating."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Badge variant={"secondary"}>
-        Proudly Swiss Made <ArrowTopRightIcon />
+        Hosted in Switzerland <ArrowTopRightIcon />
       </Badge>
       <MainTitle>Discover our online Solutions</MainTitle>
-      <div className="flex flex-row align-top items-start gap-4 my-4 pt-6 pb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 align-top items-start gap-4 my-4 pt-6 pb-10 w-full">
         <Link href="/product/cyber-search">
           <ProductCard
             title="CyberSearch"

@@ -18,15 +18,15 @@ export const FeatureCard = (props: any) => {
     <Card
       className={
         (props.size == 2 ? "md:col-span-2 " : "") +
-        " bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md flex flex-col justify-between"
+        " group bg-gradient-to-br from-[hsl(var(--muted))] to-transparent  flex flex-col justify-between "
       }
     >
-      <CardHeader className="text-start">
+      <CardHeader className="text-start group-hover:translate-x-2 ease-in-out transition duration-200">
         <div className="flex flex-row justify-between">
         <CardTitle className={inter.className + " text-2xl tracking-wide"}>
           {props.title}
         </CardTitle>
-          <Button variant={"outline"} size={"icon"} className="rounded-full">
+          <Button variant={"outline"} size={"icon"} className=" group-hover:-translate-x-2 group-hover:bg-primary transition duration-200 rounded-full">
             <Icon
               name={props.icon}
               strokeWidth={"1.2"}

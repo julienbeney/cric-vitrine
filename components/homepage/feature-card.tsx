@@ -18,11 +18,11 @@ export const FeatureCard = (props: any) => {
     <Card
       className={
         (props.size == 2 ? "md:col-span-2 " : "") +
-        " bg-gradient-to-br from-[hsl(var(--muted))] to-transparent hover:shadow-md flex flex-col justify-between"
+        " group/bento transition duration-600 ease bg-gradient-to-br hover:bg-gradient-to-tr from-[hsl(var(--muted))] to-transparent hover:shadow-md flex flex-col justify-between"
       }
     >
       <CardHeader className="text-start">
-        <CardTitle className={inter.className + " text-2xl tracking-wide"}>
+        <CardTitle className={inter.className + " text-2xl tracking-wide group-hover/bento:translate-x-2 transition duration-200"}>
           {props.title}
         </CardTitle>
         <CardDescription className="text-md">
@@ -30,10 +30,10 @@ export const FeatureCard = (props: any) => {
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex flex-row w-full items-end align-bottom justify-between">
-        <Button variant={props.buttonVariant || "outline"} className="rounded-full">
+        <Button variant={props.buttonVariant || "outline"} className="rounded-full group-hover/bento:bg-primary hover:bg-opacity-60 transition duration-400">
           {props.buttonText || "Learn More"}
         </Button>
-        <Button variant={"outline"} size={"icon"} className="rounded-full">
+        <Button variant={"outline"} size={"icon"} className="rounded-full group-hover/bento:text-primary transition duration-200">
           <Icon
             name={props.icon}
             strokeWidth={"1.2"}
